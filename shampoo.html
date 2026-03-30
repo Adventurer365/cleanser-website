@@ -28,6 +28,7 @@
           <a href="index.html#purpose">Our Purpose</a>
           <a href="index.html#products">Products</a>
           <a href="#details">Details</a>
+          <a href="cart.html">Cart <span class="cart-count" data-cart-count>0</span></a>
           <a href="#contact">Contact</a>
         </div>
       </nav>
@@ -124,6 +125,87 @@
             <source src="videos/oneclean-head-demo.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
+        </section>
+
+        <section class="product-info-section">
+          <p class="eyebrow">Product Information</p>
+          <h2>Ingredients, directions, and warnings</h2>
+          <div class="product-info-grid">
+            <article class="product-info-card">
+              <h3>Ingredients</h3>
+              <p>
+                Water (Aqua), Decyl Glucoside, Coco-Glucoside, Sodium C14-16
+                Olefin Sulfonate, Sodium Lauroyl Sarcosinate, Aloe Barbadensis
+                Leaf Juice, Glycerin, Sodium Lactate, Panthenol, Allantoin,
+                Tetrasodium Glutamate Diacetate, Gluconolactone, Sodium
+                Benzoate, Potassium Sorbate, Citric Acid.
+              </p>
+            </article>
+            <article class="product-info-card">
+              <h3>Directions for Use</h3>
+              <p>
+                Wet hair and hands thoroughly. Dispense 2-4 pumps of shampoo
+                directly into your palm or onto the scalp. Gently massage into
+                the roots and through the hair for 60-90 seconds. For days when
+                flakiness is noticeable, leave on for an additional minute
+                before rinsing. Rinse thoroughly with warm water. Use 2-3 times
+                per week or as needed for best results.
+              </p>
+            </article>
+            <article class="product-info-card product-info-card-warning">
+              <h3>Warnings</h3>
+              <p>
+                For external use only. Avoid contact with eyes. In case of
+                contact with eyes, rinse immediately with plenty of water. If
+                irritation or rash occurs, discontinue use and consult a
+                physician. Keep out of reach of children. Store in a cool, dry
+                place away from direct sunlight.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="product-shop" id="shop">
+          <p class="eyebrow">Shop This Category</p>
+          <h2>Select a OneClean Head product</h2>
+          <p class="product-summary">
+            This shop block is set up for growth. You can add more shampoo
+            items, refill sizes, or scent variations later without changing the
+            page design.
+          </p>
+          <div class="shop-grid">
+            <article class="shop-card">
+              <p class="eyebrow">Current selection</p>
+              <h3>OneClean Head</h3>
+              <p class="shop-price-note">Demo pricing included for store setup. Replace with your real pricing anytime.</p>
+              <form
+                class="add-to-cart-form"
+                data-category="Shampoo"
+                data-product-base="OneClean Head"
+              >
+                <label class="shop-label" for="shampoo-option">Choose an option</label>
+                <select id="shampoo-option" name="option" class="shop-input">
+                  <option value="10 oz Daily Shampoo" data-price="19">10 oz Daily Shampoo - $19</option>
+                  <option value="16 oz Refill" data-price="26">16 oz Refill - $26</option>
+                </select>
+                <label class="shop-label" for="shampoo-quantity">Quantity</label>
+                <input
+                  id="shampoo-quantity"
+                  class="shop-input"
+                  type="number"
+                  name="quantity"
+                  min="1"
+                  max="12"
+                  value="1"
+                />
+                <div class="shop-actions">
+                  <button class="button button-primary" type="submit">Add to Cart</button>
+                  <a class="button button-secondary" href="cart.html">View Cart</a>
+                </div>
+                <p class="shop-feedback" aria-live="polite"></p>
+              </form>
+            </article>
+          </div>
         </section>
 
         <section class="product-cta section-dark" id="contact">

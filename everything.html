@@ -28,6 +28,7 @@
           <a href="index.html#purpose">Our Purpose</a>
           <a href="index.html#products">Products</a>
           <a href="#details">Details</a>
+          <a href="cart.html">Cart <span class="cart-count" data-cart-count>0</span></a>
           <a href="#contact">Contact</a>
         </div>
       </nav>
@@ -97,6 +98,48 @@
             <li>Placeholder image blocks make future image swaps simple</li>
             <li>The page is ready for future product selection and checkout additions</li>
           </ul>
+        </section>
+
+        <section class="product-shop" id="shop">
+          <p class="eyebrow">Shop This Category</p>
+          <h2>Select a OneClean Everything product</h2>
+          <p class="product-summary">
+            This all-purpose cleaner section is ready for future formulas,
+            sizes, and purchase options as the category expands.
+          </p>
+          <div class="shop-grid">
+            <article class="shop-card">
+              <p class="eyebrow">Current selection</p>
+              <h3>OneClean Everything</h3>
+              <p class="shop-price-note">Demo pricing included for store setup. Replace with your real pricing anytime.</p>
+              <form
+                class="add-to-cart-form"
+                data-category="All-Purpose Cleaner"
+                data-product-base="OneClean Everything"
+              >
+                <label class="shop-label" for="everything-option">Choose an option</label>
+                <select id="everything-option" name="option" class="shop-input">
+                  <option value="16 oz Spray Bottle" data-price="16">16 oz Spray Bottle - $16</option>
+                  <option value="32 oz Refill" data-price="24">32 oz Refill - $24</option>
+                </select>
+                <label class="shop-label" for="everything-quantity">Quantity</label>
+                <input
+                  id="everything-quantity"
+                  class="shop-input"
+                  type="number"
+                  name="quantity"
+                  min="1"
+                  max="12"
+                  value="1"
+                />
+                <div class="shop-actions">
+                  <button class="button button-primary" type="submit">Add to Cart</button>
+                  <a class="button button-secondary" href="cart.html">View Cart</a>
+                </div>
+                <p class="shop-feedback" aria-live="polite"></p>
+              </form>
+            </article>
+          </div>
         </section>
 
         <section class="product-cta section-dark" id="contact">

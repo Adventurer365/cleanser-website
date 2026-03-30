@@ -28,6 +28,7 @@
           <a href="index.html#purpose">Our Purpose</a>
           <a href="index.html#products">Products</a>
           <a href="#details">Details</a>
+          <a href="cart.html">Cart <span class="cart-count" data-cart-count>0</span></a>
           <a href="#contact">Contact</a>
         </div>
       </nav>
@@ -97,6 +98,48 @@
             <li>Placeholder image blocks keep the design ready for future assets</li>
             <li>The page is set up for future product selection and checkout additions</li>
           </ul>
+        </section>
+
+        <section class="product-shop" id="shop">
+          <p class="eyebrow">Shop This Category</p>
+          <h2>Select a OneClean Outfit product</h2>
+          <p class="product-summary">
+            Use this laundry section as the starting point for future detergent
+            products, sizes, and refill formats.
+          </p>
+          <div class="shop-grid">
+            <article class="shop-card">
+              <p class="eyebrow">Current selection</p>
+              <h3>OneClean Outfit</h3>
+              <p class="shop-price-note">Demo pricing included for store setup. Replace with your real pricing anytime.</p>
+              <form
+                class="add-to-cart-form"
+                data-category="Laundry Detergent"
+                data-product-base="OneClean Outfit"
+              >
+                <label class="shop-label" for="outfit-option">Choose an option</label>
+                <select id="outfit-option" name="option" class="shop-input">
+                  <option value="32 oz Standard Bottle" data-price="24">32 oz Standard Bottle - $24</option>
+                  <option value="64 oz Refill" data-price="38">64 oz Refill - $38</option>
+                </select>
+                <label class="shop-label" for="outfit-quantity">Quantity</label>
+                <input
+                  id="outfit-quantity"
+                  class="shop-input"
+                  type="number"
+                  name="quantity"
+                  min="1"
+                  max="12"
+                  value="1"
+                />
+                <div class="shop-actions">
+                  <button class="button button-primary" type="submit">Add to Cart</button>
+                  <a class="button button-secondary" href="cart.html">View Cart</a>
+                </div>
+                <p class="shop-feedback" aria-live="polite"></p>
+              </form>
+            </article>
+          </div>
         </section>
 
         <section class="product-cta section-dark" id="contact">

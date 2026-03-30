@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OneClean Cart</title>
+    <meta
+      name="description"
+      content="Review selected OneClean products and prepare a simple order request."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="product-page" id="top">
+      <nav class="nav">
+        <a class="brand" href="index.html">OneClean</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+          Menu
+        </button>
+        <div class="nav-links" id="nav-links">
+          <a href="index.html#about">About</a>
+          <a href="index.html#products">Products</a>
+          <a href="bodywash.html">OneClean Body</a>
+          <a href="shampoo.html">OneClean Head</a>
+          <a href="cart.html">Cart <span class="cart-count" data-cart-count>0</span></a>
+        </div>
+      </nav>
+
+      <main class="product-page-grid">
+        <section class="product-hero">
+          <div class="product-hero-copy">
+            <p class="eyebrow">Your selections</p>
+            <h1>OneClean Cart</h1>
+            <p class="product-summary">
+              This cart gives you a simple checkout path for the current static
+              site. Customers can review items, adjust quantities, and prepare
+              an order email.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-secondary" href="index.html#products">Continue Shopping</a>
+            </div>
+          </div>
+          <div class="product-ad-panel">
+            <p class="eyebrow">Next step</p>
+            <h2>Simple checkout request flow</h2>
+            <p class="product-summary">
+              For now, checkout creates a prefilled email order request. Later,
+              this can be replaced with Stripe, Shopify, Square, or another real
+              payment flow.
+            </p>
+          </div>
+        </section>
+
+        <section class="cart-layout" data-cart-view>
+          <section class="cart-panel">
+            <p class="eyebrow">Cart Items</p>
+            <h2>Review your order</h2>
+            <div class="cart-empty" data-cart-empty>
+              <p class="product-summary">Your cart is empty right now.</p>
+              <a class="button button-primary" href="index.html#products">Browse Products</a>
+            </div>
+            <div class="cart-items" data-cart-items></div>
+          </section>
+
+          <aside class="checkout-panel">
+            <p class="eyebrow">Checkout</p>
+            <h2>Prepare an order email</h2>
+            <div class="checkout-summary">
+              <div class="cart-totals">
+                <div class="cart-totals-row">
+                  <span>Items</span>
+                  <span data-cart-items-total>0</span>
+                </div>
+                <div class="cart-totals-row">
+                  <span>Estimated total</span>
+                  <span class="cart-total-strong" data-cart-grand-total>$0.00</span>
+                </div>
+              </div>
+            </div>
+            <form class="checkout-form" data-checkout-form>
+              <label class="checkout-label" for="checkout-name">Name</label>
+              <input class="checkout-input" id="checkout-name" name="customerName" type="text" placeholder="Your name" />
+              <label class="checkout-label" for="checkout-email">Email</label>
+              <input class="checkout-input" id="checkout-email" name="customerEmail" type="email" placeholder="you@example.com" />
+              <label class="checkout-label" for="checkout-notes">Order notes</label>
+              <textarea
+                class="checkout-input checkout-input-message"
+                id="checkout-notes"
+                name="orderNotes"
+                placeholder="Delivery questions, preferred contact method, or anything else you want to include."
+              ></textarea>
+              <div class="checkout-actions">
+                <button class="button button-primary" type="submit">Prepare Email Order</button>
+                <button class="button button-secondary" type="button" data-clear-cart>Clear Cart</button>
+              </div>
+              <p class="checkout-note">
+                This sends the order to `onecleanyou@gmail.com` using the visitor's email app.
+              </p>
+            </form>
+          </aside>
+        </section>
+      </main>
+    </header>
+
+    <footer class="footer">
+      <p>OneClean Cart</p>
+      <a href="#top">Back to top</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
