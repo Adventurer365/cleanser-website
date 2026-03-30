@@ -197,7 +197,13 @@ h1 {
 .hero-card h2,
 .section-heading h2,
 .split-layout h2,
-.contact-panel h2 {
+.contact-panel h2,
+.product-hero-copy h2,
+.product-ad-panel h2,
+.product-bottle-panel h2,
+.product-details h2,
+.product-story h2,
+.product-cta h2 {
   margin: 8px 0 14px;
   font-size: clamp(2.2rem, 4vw, 3.2rem);
   line-height: 1;
@@ -393,6 +399,110 @@ h1 {
   color: rgba(251, 247, 240, 0.78);
 }
 
+.product-page {
+  min-height: 100vh;
+  padding-top: 28px;
+  padding-bottom: 56px;
+}
+
+.product-page-grid {
+  display: grid;
+  gap: 28px;
+}
+
+.product-hero {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 28px;
+  align-items: stretch;
+}
+
+.product-hero-copy,
+.product-story,
+.product-details,
+.product-cta,
+.product-ad-panel,
+.product-bottle-panel {
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+
+.product-hero-copy,
+.product-story,
+.product-details,
+.product-bottle-panel {
+  background: rgba(255, 255, 255, 0.74);
+}
+
+.product-ad-panel,
+.product-cta {
+  background: linear-gradient(180deg, rgba(255, 250, 242, 0.88), rgba(245, 237, 223, 0.94));
+}
+
+.product-summary,
+.product-story p,
+.product-hero-copy p,
+.product-bottle-panel p,
+.product-details p,
+.product-cta p {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.product-summary {
+  font-size: 1.05rem;
+}
+
+.product-ad-image-large,
+.product-image {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 22px;
+}
+
+.product-ad-image-large {
+  min-height: 360px;
+}
+
+.product-image {
+  max-width: 340px;
+  margin: 22px auto 0;
+  border: 1px solid var(--line);
+}
+
+.product-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.product-detail-card {
+  margin-top: 18px;
+  padding: 22px;
+  border-radius: 24px;
+  border: 1px solid var(--line);
+  background: rgba(255, 250, 242, 0.84);
+}
+
+.product-detail-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.8rem;
+}
+
+.product-detail-card p {
+  margin: 0;
+}
+
+.product-list {
+  margin: 18px 0 0;
+  padding-left: 18px;
+  color: var(--ink);
+  line-height: 1.9;
+}
+
 .footer {
   display: flex;
   justify-content: space-between;
@@ -405,6 +515,8 @@ h1 {
 @media (max-width: 900px) {
   .hero-content,
   .purpose-layout,
+  .product-hero,
+  .product-detail-grid,
   .split-layout,
   .contact-panel,
   .grid-three {
@@ -448,6 +560,10 @@ h1 {
   .product-thumb {
     max-width: 180px;
   }
+
+  .product-image {
+    max-width: 220px;
+  }
 }
 
 @media (max-width: 560px) {
@@ -466,6 +582,12 @@ h1 {
   .hero-card,
   .info-card,
   .step-card,
+  .product-hero-copy,
+  .product-story,
+  .product-details,
+  .product-cta,
+  .product-ad-panel,
+  .product-bottle-panel,
   .ingredient-panel,
   .contact-panel {
     border-radius: 22px;
