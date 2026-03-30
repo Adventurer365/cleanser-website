@@ -223,6 +223,12 @@ h1 {
   background: rgba(255, 250, 242, 0.55);
 }
 
+.section-purpose {
+  background:
+    linear-gradient(180deg, rgba(255, 250, 242, 0.7), rgba(246, 241, 231, 0.92)),
+    radial-gradient(circle at top right, rgba(127, 154, 101, 0.18), transparent 28%);
+}
+
 .section-dark {
   background: linear-gradient(135deg, #2d3b2e, #415441);
   color: #fbf7f0;
@@ -262,6 +268,51 @@ h1 {
   grid-template-columns: 1fr 1fr;
   gap: 30px;
   align-items: start;
+}
+
+.purpose-layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.purpose-heading {
+  margin-bottom: 0;
+}
+
+.purpose-card {
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: var(--shadow);
+}
+
+.purpose-card p {
+  margin: 0 0 18px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.purpose-priorities {
+  margin: 24px 0;
+  padding: 20px;
+  border-radius: 24px;
+  background: rgba(255, 250, 242, 0.84);
+  border: 1px solid var(--line);
+}
+
+.purpose-label {
+  margin-bottom: 12px;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.purpose-close {
+  margin-bottom: 0;
+  color: var(--ink);
+  font-weight: 600;
 }
 
 .ingredient-panel {
@@ -353,6 +404,7 @@ h1 {
 
 @media (max-width: 900px) {
   .hero-content,
+  .purpose-layout,
   .split-layout,
   .contact-panel,
   .grid-three {
