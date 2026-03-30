@@ -1,6 +1,6 @@
-# PureNest Cleanser Website
+# OneClean Website
 
-This is a simple static website for a homemade cleanser company. It uses plain HTML, CSS, and JavaScript, so you do not need a framework or build step to get started.
+This is a simple static website for OneClean, a handmade household and personal cleaning products business. It uses plain HTML, CSS, and JavaScript, so you do not need a framework or build step to get started.
 
 ## Files
 
@@ -30,13 +30,14 @@ Then open `http://localhost:8000` in your browser.
 ### Update your branding
 
 - Change the company name in `index.html`.
-- Replace `PureNest` with your actual product or company name.
+- Replace `OneClean` with your actual product or company name if it changes.
 - Update the email link near the bottom of the page.
 
 ### Update product details
 
-- Replace the placeholder ingredient descriptions with your real cleanser ingredients.
-- Edit the about and benefits sections so they match your actual product.
+- Update the product list section with your current categories.
+- Add new product cards by duplicating one of the existing product items in `index.html`.
+- Edit the about and benefits sections so they match your actual business.
 - Add your pricing, ordering method, or social links in the contact section.
 
 ### Add photos
@@ -46,7 +47,7 @@ Then open `http://localhost:8000` in your browser.
 3. Insert image tags into `index.html`, for example:
 
 ```html
-<img src="images/cleanser-bottle.jpg" alt="Bottle of homemade cleanser" />
+<img src="images/body-wash.jpg" alt="OneClean body wash bottle" />
 ```
 
 ## How to publish it
