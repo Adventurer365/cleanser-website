@@ -490,6 +490,12 @@ h1 {
   min-height: 360px;
 }
 
+.product-ad-image-compact {
+  max-width: 50%;
+  min-height: auto;
+  margin: 0 auto;
+}
+
 .product-image {
   max-width: 340px;
   margin: 22px auto 0;
@@ -595,6 +601,10 @@ h1 {
 
   .product-image {
     max-width: 220px;
+  }
+
+  .product-ad-image-compact {
+    max-width: 100%;
   }
 }
 

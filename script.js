@@ -21,9 +21,13 @@ if (autoplayVideos.length > 0) {
   const videoObserver = new IntersectionObserver(
     (entries, observer) => {
       entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
+        if (!entry.isIntersecting || entry.boundingClientRect.top > window.innerHeight) {
+          return;
+        }
 
         const video = entry.target;
+        video.muted = true;
+        video.defaultMuted = true;
         video.play().catch(() => {
           // Browsers may still block playback in some cases.
         });
@@ -31,7 +35,7 @@ if (autoplayVideos.length > 0) {
         observer.unobserve(video);
       });
     },
-    { threshold: 0.6 }
+    { threshold: 0 }
   );
 
   autoplayVideos.forEach((video) => {
