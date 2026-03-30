@@ -14,3 +14,27 @@ if (navToggle && navLinks) {
     });
   });
 }
+
+const autoplayVideos = document.querySelectorAll(".autoplay-once");
+
+if (autoplayVideos.length > 0) {
+  const videoObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        const video = entry.target;
+        video.play().catch(() => {
+          // Browsers may still block playback in some cases.
+        });
+
+        observer.unobserve(video);
+      });
+    },
+    { threshold: 0.6 }
+  );
+
+  autoplayVideos.forEach((video) => {
+    videoObserver.observe(video);
+  });
+}

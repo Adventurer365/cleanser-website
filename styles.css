@@ -526,6 +526,15 @@ h1 {
   line-height: 1.9;
 }
 
+.product-video {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  background: #000;
+}
+
 .footer {
   display: flex;
   justify-content: space-between;
