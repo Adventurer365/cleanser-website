@@ -31,7 +31,7 @@ Then open `http://localhost:8000` in your browser.
 
 - Change the company name in `index.html`.
 - Replace `OneClean` with your actual product or company name if it changes.
-- Update the email link near the bottom of the page.
+- Update the contact section near the bottom of the page with your name and business email.
 
 ### Update product details
 
